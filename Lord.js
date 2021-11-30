@@ -1736,15 +1736,31 @@ if (!q) return reply('Linknya?')
                     reply('Terjadi kesalahan')
                 })
 		break
-            case 'loli': case 'neko': 
-              reply(mess.wait)
+       case 'loli':
+       case 'husbu':
+       case 'milf':
+       case 'cosplay':
+       case 'wallml':
+              if (!isRegister) return reply(`You are not verified\n\nReply this chat and send bot password\n\nHint : \nPassword contains 4 digit number\nCheck password at: https://dha-chan02.github.io`)
+              let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
+              let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
+              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
+		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}loli`,buttonText:{displayText:'loli'},type:1}]
+              imageMsg = ( await dha.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
+              buttonsMessage = {footerText:'Jangan Lupa Donasi Ya Kak ☕', imageMessage: imageMsg,
+              contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
+              prep = await dha.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              dha.relayWAMessage(prep)
+              fs.unlinkSync(`./${sender}.jpeg`)
+              break
+            case 'neko': 
+	       reply(mess.wait)
               let loli = await fetchJson(`https://api.waifu.pics/sfw/neko`)
               await sendFileFromUrl(from,loli.url,`${command}`,Ofc)
                 .catch((err) => {
                        reply('Terjadi kesalahan')
                 })
-		break
-						case 'asupan':{
+		break				case 'asupan':{
 									if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply(mess.limit)
 									reply(mess.wait)
 									data = fs.readFileSync('./lib/asupan.js');
