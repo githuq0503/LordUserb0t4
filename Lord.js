@@ -1744,7 +1744,7 @@ if (!q) return reply('Linknya?')
               if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply(mess.limit)
               getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=e54205a4ca2caa368cc067bb`).then((gambar) => {
               reply(mess.wait)
-              Zeeone.sendMessage(from, gambar, image, { quoted: ftrol, caption: 'Nih Jangan Lupa Subscribe LeonGanz'})
+              Zeeone.sendMessage(from, gambar, image,})
             })
             break
 
