@@ -1741,7 +1741,7 @@ if (!q) return reply('Linknya?')
        case 'milf':
        case 'cosplay':
        case 'wallml':
-              if (!isRegister) return reply(`You are not verified\n\nReply this chat and send bot password\n\nHint : \nPassword contains 4 digit number\nCheck password at: https://dha-chan02.github.io`)
+              reply(mess.wait)
               let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
               let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
               fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
@@ -1749,8 +1749,8 @@ if (!q) return reply('Linknya?')
               imageMsg = ( await dha.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
               buttonsMessage = {footerText:'Jangan Lupa Donasi Ya Kak ☕', imageMessage: imageMsg,
               contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
-              prep = await dha.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
-              dha.relayWAMessage(prep)
+              prep = await Zeeone.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              Zeeone.relayWAMessage(prep)
               fs.unlinkSync(`./${sender}.jpeg`)
               break
 
