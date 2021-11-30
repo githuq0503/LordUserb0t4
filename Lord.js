@@ -1736,19 +1736,8 @@ if (!q) return reply('Linknya?')
                     reply('Terjadi kesalahan')
                 })
 		break
-       case 'loli':
-       case 'husbu':
-       case 'milf':
-       case 'cosplay':
-       case 'wallml':
-              if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply(mess.limit)
-              getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=e54205a4ca2caa368cc067bb`).then((gambar) => {
-              reply(mess.wait)
-              Zeeone.sendMessage(from, gambar, image,})
-            })
-            break
-
-            case 'neko':
+            case 'neko': 
+            case 'loli':
                if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply(mess.limit) 
 	       reply(mess.wait)
               let loli = await fetchJson(`https://api.waifu.pics/sfw/neko`)
