@@ -1741,20 +1741,15 @@ if (!q) return reply('Linknya?')
        case 'milf':
        case 'cosplay':
        case 'wallml':
+              if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply(mess.limit)
+              getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=e54205a4ca2caa368cc067bb`).then((gambar) => {
               reply(mess.wait)
-              let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
-              let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
-              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
-		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}loli`,buttonText:{displayText:'loli'},type:1}]
-              imageMsg = ( await Zeeone.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
-              buttonsMessage = {footerText:'Jangan Lupa Donasi Ya Kak ☕', imageMessage: imageMsg,
-              contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
-              prep = await Zeeone.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
-              Zeeone.relayWAMessage(prep)
-              fs.unlinkSync(`./${sender}.jpeg`)
-              break
+              Zeeone.sendMessage(from, gambar, image, { quoted: ftrol, caption: 'Nih Jangan Lupa Subscribe LeonGanz'})
+            })
+            break
 
-            case 'neko': 
+            case 'neko':
+               if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply(mess.limit) 
 	       reply(mess.wait)
               let loli = await fetchJson(`https://api.waifu.pics/sfw/neko`)
               await sendFileFromUrl(from,loli.url,`${command}`,Ofc)
