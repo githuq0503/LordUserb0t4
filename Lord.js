@@ -1753,6 +1753,7 @@ if (!q) return reply('Linknya?')
               dha.relayWAMessage(prep)
               fs.unlinkSync(`./${sender}.jpeg`)
               break
+
             case 'neko': 
 	       reply(mess.wait)
               let loli = await fetchJson(`https://api.waifu.pics/sfw/neko`)
@@ -1760,7 +1761,8 @@ if (!q) return reply('Linknya?')
                 .catch((err) => {
                        reply('Terjadi kesalahan')
                 })
-		break				case 'asupan':{
+		break				                        
+                                                                        case 'asupan':{
 									if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply(mess.limit)
 									reply(mess.wait)
 									data = fs.readFileSync('./lib/asupan.js');
