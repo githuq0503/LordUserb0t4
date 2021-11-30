@@ -1343,7 +1343,7 @@ const checkWin = (sender) => {
 														},
 														"type": "RESPONSE"
 													}]
-											sendButLocation(from, teks , `Thank for verification 💋\n${namabot}™© | By ${owner_name}`, thumbnail, papako, {contextInfo: { mentionedJid: [sender]}})
+											sendButLocation(from, teks , `Thank for verification 💋\n${namabot} | By ${owner_name}`, thumbnail, papako, {contextInfo: { mentionedJid: [sender]}})
 									break
 						case 'autoregis': case 'register':
 									if (!Ofc.key.fromMe && !isOwner && !isCreator) return reply(mess.only.owner)
@@ -1949,7 +1949,7 @@ Alasan : ${reason}`, [sender], true)
 									break
 						case 'setnamabot':{
 									if (!isOwner && !Ofc.key.fromMe) return reply(mess.only.owner)
-									if (args.length < 1) return reply(`Kirim perintah ${command} nama\n\nContoh : ${command} Alphabot`)
+									if (args.length < 1) return reply(`Kirim perintah ${command} nama\n\nContoh : ${command} Yui-Chan`)
 									Zeeone.updateProfileName(q)
 									.then((res) => reply('Sukses Lord'))
 									.catch((err) => reply('Eror Lord'))
@@ -1957,7 +1957,7 @@ Alasan : ${reason}`, [sender], true)
 									break
 						case 'setbiobot':{
 									 if (!isOwner && !Ofc.key.fromMe) return reply(mess.only.owner)
-									if (args.length < 1) return reply(`Kirim perintah ${command} nama\n\nContoh : ${command} Alphabot`)
+									if (args.length < 1) return reply(`Kirim perintah ${command} nama\n\nContoh : ${command} YUI X LEON`)
 									Zeeone.setStatus(q)
 									.then((res) => reply('Sukses Lord'))
 									.catch((err) => reply('Eror Lord'))
@@ -1978,7 +1978,7 @@ Alasan : ${reason}`, [sender], true)
 						case 'promote':
 									if (!isGroup) return reply(mess.only.group)
 									if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
-									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
+									if (!isBotGroupAdmins) return reply(`Jadikan Yui Sebagai Admin Group!`)
 									if (Ofc.message.extendedTextMessage === null || Ofc.message.extendedTextMessage === undefined) return;
 									if (Ofc.message.extendedTextMessage.contextInfo.participant === undefined) {
 										entah = Ofc.message.extendedTextMessage.contextInfo.mentionedJid
@@ -2021,7 +2021,7 @@ Alasan : ${reason}`, [sender], true)
 									if (!isGroup) return reply(mess.only.group)
 									if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
 									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
-									if (args.length == 0) return reply(`Penggunaan ${prefix + command} Alphabot Support`)
+									if (args.length == 0) return reply(`Penggunaan ${prefix + command} Leon Ganteng`)
 										Zeeone.groupUpdateSubject(from, q)
 										.then((res) => reply(jsonformat(res)))
 										.catch((err) => reply(jsonformat(err)))
@@ -2030,7 +2030,7 @@ Alasan : ${reason}`, [sender], true)
 									if (!isGroup) return reply(mess.only.group)
 									if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
 									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
-									if (args.length == 0)  return reply(`Penggunaan ${prefix + command} Alphabot Support`)
+									if (args.length == 0)  return reply(`Penggunaan ${prefix + command} Yui-Chan Support`)
 										Zeeone.groupUpdateDescription(from, q)
 										.then((res) => reply(jsonformat(res)))
 										.catch((err) => reply(jsonformat(err)))
@@ -2518,7 +2518,7 @@ Alasan : ${reason}`, [sender], true)
 									break
 						case 'bc': case 'broadcast':
 									if (!Ofc.key.fromMe && !isOwner) return reply(mess.only.owner) 
-									if (args.length < 1) return reply(`${prefix + command} Alphabot`)
+									if (args.length < 1) return reply(`${prefix + command} Yui-Cans`)
 									anjir = await Zeeone.chats.all()
 									if (isMedia && !Ofc.message.videoMessage || isQuotedImage) {
 									const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(Ofc).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : Ofc
@@ -2695,7 +2695,7 @@ Alasan : ${reason}`, [sender], true)
 						case 'stickermeme': case 'memesticker': case 'memestick': case 'stickmeme': case 'stcmeme': case 'smeme':
 									if (!isPremium && !Ofc.key.fromMe) return reply(mess.only.prem)
 									try {
-										if (!q) return reply(`${prefix+command} Alphabot|Zeeone`)
+										if (!q) return reply(`${prefix+command} Yui-Chan|LeonGanz`)
 										var bawah = q.replace('', '_').replace('\n','%5Cn').replace('?', '~q').replace('%', '~p').replace('&', '~a').replace('#', '~h').replace('/', '~s')
 										if ( isQuotedImage) {
 											reply(mess.wait)
