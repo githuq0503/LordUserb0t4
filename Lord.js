@@ -3200,15 +3200,15 @@ ${teks}`, members_id, true)
 
 「 *PHONE STATISTIC* 」
  
-🔖 Whatsapp Ver. : ${wa_version}
-🔖 Ram Usage : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+🔖 Whatsapp Ver. : 99.9.99.9
+🔖 Ram Usage : 60MB/ 1000000MB
 🔖 Mcc : ${mcc}
 🔖 Mnc : ${mnc}
-🔖 Versi OS : ${os_version}
-🔖 Merk HP : ${device_manufacturer}
-🔖 Versi HP : ${device_model}
-🔖 Browser : ${Zeeone.browserDescription}
-🔖 Baterai : ${isBattre} %
+🔖 Versi OS : 15.1.0
+🔖 Merk HP : ASUS ROG 3 / IPHONE 12
+🔖 Versi HP : ASUS_ROG_3
+🔖 Browser : Linux
+🔖 Baterai : 100%
 🔖 Charging : ${isCharge}
 `
 let qqppp = [{
@@ -3224,7 +3224,7 @@ let qqppp = [{
                     },
                     "type": "RESPONSE"
                 }]
-                sendButLocation(from, teks, `LordUserbot™© | Allright Reserved.`, thumbnail, qqppp, {contextInfo: { mentionedJid: [nupe]}})
+                sendButLocation(from, teks, `Yui-Chan | Allright Reserved.`, thumbnail, qqppp, {contextInfo: { mentionedJid: [nupe]}})
 				
 } catch (e){
 reply(`${e}`)
